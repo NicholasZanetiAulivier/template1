@@ -5,7 +5,7 @@ const { hashPassword } = require('../../../utils/password');
 async function getUsers(request, response, next) {
   try {
     const offset = request.query.offset || 0;
-    const limit = request.query.limit || 0;
+    const limit = request.query.limit || 10;
     const temp = offset + limit;
     const users = await usersService.getUsers();
 
